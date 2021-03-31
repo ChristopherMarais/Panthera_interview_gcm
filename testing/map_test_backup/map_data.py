@@ -75,6 +75,8 @@ def map_get(file_name=map_file):
 def za_stats_get():
     df = stats_get()
     rsa_means = df[['population_density', 'norm_delta_cases', 'window_avg_mobility', 'avg_infected_per_area', 'infection_prob']].mean()
-    rsa_sums = df[['population', 'area', 'avg_infected_per_area', 'window_infected_count']].sum()
-    rsa_stats_df = pd.DataFrame(rsa_sums.append(rsa_means), columns=['RSA stats'])
+    rsa_sums = df[['population', 'area', 'window_infected_count']].sum()
+    rsa_stats_df = pd.DataFrame(rsa_sums.append(rsa_means), columns=['Values']).round(3)
+    rsa_stats_df['RSA Statistics'] = ['Population size', 'Area (Square km)', 'Current COVID Carriers', 'Population Density', 'Current Estimated Growth of Cases', 'Mobility of Citizens (0.5=Normal)', 'Infected People per Square km', 'Estimated Probability of Infection (EPI)']
+    rsa_stats_df = rsa_stats_df[['RSA Statistics', 'Values']]
     return rsa_stats_df

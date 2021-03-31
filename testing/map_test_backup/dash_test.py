@@ -67,7 +67,12 @@ def serve_layout():
     )
 
     # Configure dash 
-    updated_layout = html.Div(style={'backgroundColor': colors['background']}, 
+    updated_layout = html.Div(
+        style={
+        'backgroundColor': colors['background'],
+        'margin-left': 'auto', 
+        'margin-right': 'auto',
+        }, 
     children=[
         html.H1(children='Test data',
             style={
@@ -83,6 +88,7 @@ def serve_layout():
             'padding' : '25px',
             }
         ),
+        # modify map graph layout
         dcc.Graph(
             id='Map',
             figure=map_fig,
@@ -92,9 +98,52 @@ def serve_layout():
             "border": "2px #5c5c5c solid",
             'margin-right': 'auto',
             'margin-left': 'auto',
+            "margin-bottom": "50px"
             }
         ),
+        # modify table layout
+        dash_table.DataTable(
+            id='table',
+            columns=[{"name": i, "id": i} for i in rsa_stats_df.columns],
+            data=rsa_stats_df.to_dict('records'),
+            style_table={
+                'margin-left': 'auto', 
+                'margin-right': 'auto',
+                "margin-bottom": "50px",
+                "border": "2px #5c5c5c solid",
+                'width':'40%',
+            },
+            style_as_list_view=True,
+            style_cell={
+                'padding': '5px',
+            },
+            style_header={
+                'backgroundColor': 'rgb(230, 230, 230)',
+                'fontWeight': 'bold'
+            },
+            style_data={
+                'height': 'auto',
+                'width':'auto',
+            },
+            fill_width=True,
+            style_cell_conditional=[
+                {
+                    'if': {'column_id': c},
+                    'textAlign': 'left'
+                } for c in ['RSA Statistics']
+            ],
+            style_data_conditional=[
+                {
+            'if': {'row_index': 'odd'},
+            'backgroundColor': 'rgb(248, 248, 248)'
+                }
+            ],
+        ),
     ])
+
+
+
+    
     return updated_layout
 
 # Apply fucntion to app.layout so that dash recalcualtes on refresh
