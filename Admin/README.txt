@@ -8,7 +8,7 @@ docker commit <existing-container> <hub-user>/<repo-name>[:<tag>]
 docker push <hub-user>/<repo-name>:<tag>
 
 
-deploy to image to aws
+# push to image to aws
 docker tag panthera_dash_gcm_aws:latest public.ecr.aws/w9i9s1d1/dashboard:latest
 docker push public.ecr.aws/w9i9s1d1/dashboard:latest
 
