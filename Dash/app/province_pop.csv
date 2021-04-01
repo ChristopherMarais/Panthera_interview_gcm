@@ -1,10 +1,10 @@
-﻿Province,Population,SquareKilometers,PopulationDensity,id
-Western Cape,6621103,129462,51.1,9
-Eastern Cape,6522734,168966,38.6,1
-Northern Cape,1225555,372889,3.3,7
-Free State,2954348,129825,22.8,2
-KwaZulu-Natal,11384722,94361,120.7,4
-North West,3978955,104882,37.9,8
-Gauteng,14717040,18178,809.6,3
-Mpumalanga,4523874,76495,59.1,6
-Limpopo,5797275,125755,46.1,5
+﻿province,population,area,population_density,id,short_name
+Eastern Cape,6522734,168966,38.6,1,EC
+Free State,2954348,129825,22.8,2,FS
+Gauteng,14717040,18178,809.6,3,GP
+KwaZulu-Natal,11384722,94361,120.7,4,KZN
+Limpopo,5797275,125755,46.1,5,LP
+Mpumalanga,4523874,76495,59.1,6,MP
+Northern Cape,1225555,372889,3.3,7,NC
+North West,3978955,104882,37.9,8,NW
+Western Cape,6621103,129462,51.1,9,WC

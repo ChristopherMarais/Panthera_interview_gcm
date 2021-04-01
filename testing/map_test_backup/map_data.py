@@ -25,14 +25,14 @@ deaths_url_str = "https://raw.githubusercontent.com/dsfsi/covid19za/master/data/
 recoveries_url_str = "https://raw.githubusercontent.com/dsfsi/covid19za/master/data/covid19za_provincial_cumulative_timeline_recoveries.csv"
 mobility_url_str = "https://raw.githubusercontent.com/dsfsi/covid19za/master/data/mobility/google_mobility/mobility_report_ZA.csv"
 
-def stats_get(cases_url=cases_url_str, deaths_url=deaths_url_str, recoveries_url=recoveries_url_str, mobility_url=mobility_url_str, day_window_size=7):
-    # Import necessary data
-    prov_keys_df = pd.read_csv(working_path+'/province_pop.csv', index_col='province')
-    cases_df = retrieve_data(cases_url)
-    deaths_df = retrieve_data(deaths_url)
-    recoveries_df = retrieve_data(recoveries_url)
-    mobility_df = retrieve_data(mobility_url)
+# Import necessary data
+prov_keys_df = pd.read_csv(working_path+'/province_pop.csv', index_col='province')
+cases_df = retrieve_data(cases_url_str)
+deaths_df = retrieve_data(deaths_url_str)
+recoveries_df = retrieve_data(recoveries_url_str)
+mobility_df = retrieve_data(mobility_url_str)
 
+def stats_get(cases_df=cases_df, deaths_df=deaths_df, recoveries_df=recoveries_df, mobility_df=mobility_df, prov_keys_df=prov_keys_df, day_window_size=7):
     # collect and average mobility data for the past day_window_size days
     public_mobility_lst = ['retail and recreation','grocery and pharmacy','parks','transit stations', 'workplaces']
     mobility_df = mobility_df.sort_values(['date'])
@@ -77,6 +77,6 @@ def za_stats_get():
     rsa_means = df[['population_density', 'norm_delta_cases', 'window_avg_mobility', 'avg_infected_per_area', 'infection_prob']].mean()
     rsa_sums = df[['population', 'area', 'window_infected_count']].sum()
     rsa_stats_df = pd.DataFrame(rsa_sums.append(rsa_means), columns=['Values']).round(3)
-    rsa_stats_df['RSA Statistics'] = ['Population size', 'Area (Square km)', 'Current COVID Carriers', 'Population Density', 'Current Estimated Growth of Cases', 'Mobility of Citizens (0.5=Normal)', 'Infected People per Square km', 'Estimated Probability of Infection (EPI)']
-    rsa_stats_df = rsa_stats_df[['RSA Statistics', 'Values']]
+    rsa_stats_df['RSA COVID Statistics'] = ['Population size', 'Area (Square km)', 'Current Active Carriers', 'Population Density', 'Current Estimated Slope of Carrier Growth', 'Mobility of Citizens (0.5=Normal)', 'Carriers per Square km', 'Estimated Probability of Infection (EPI)']
+    rsa_stats_df = rsa_stats_df[['RSA COVID Statistics', 'Values']]
     return rsa_stats_df
