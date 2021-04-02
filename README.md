@@ -1,5 +1,5 @@
 # Panthera_interview_gcm
-This repo contains the code and static data used to create a [COVID-19 dashboard for South Africa](https://3.140.191.119:8050/).
+This repo contains the code and static data used to create a [COVID-19 dashboard for South Africa](http://3.140.191.119:8050).
 This was done as part of the interviewing process at Panthera.
 
 ### Data source
