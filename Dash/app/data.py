@@ -121,6 +121,7 @@ def mobility_get(url=mobility_url_str):
     df[df.columns[2:]] = (df[df.columns[2:]]+100)/200
     df['province'] = pd.Categorical(df['province'], categories=prov_name_lst, ordered=True)
     df = df.sort_values(['date','province'])
+    df['date'] = pd.to_datetime(df['date'],format="%Y-%m-%d")
     df.columns = mob_name_lst
     return df
 
