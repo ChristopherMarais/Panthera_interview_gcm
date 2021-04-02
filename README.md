@@ -29,4 +29,3 @@ A statistic to view is selected from the buttons above each plot. Further select
 * Please note that we are aware of th bug that makes the mobility plot containing line graphs be compressed to the one side. Please refer to the *How to use the dashboard* section to manually adjust the view of the plot.
 - Mobility lines all show the mobility of people as estimated by Google on how much people moved to places relative to what was normal before COVID. The places are categorized into Retail and Recreation, Grocery and Pharmacy, Parks, Transit stations, Workplaces, Residential. Refer to [their page](https://www.google.com/covid19/mobility/) for further explanations.
 - The deaths, recoveries and cases data of COVID are shown as line graphs with the cumulative data normalized to the population size of each province.
--  
