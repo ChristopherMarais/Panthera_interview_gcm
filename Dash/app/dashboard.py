@@ -389,6 +389,7 @@ def display_mobility_line(mob_button, mob_df):
         )
     mob_fig.add_hline(y=0.5, line_dash="dash")
     mob_fig.update_layout(
+        xaxis=dict(tick0='2020-02-15'),
         yaxis_range=[0,1],
          xaxis_title="Date", 
          font=dict(size=16, color='black'), 
