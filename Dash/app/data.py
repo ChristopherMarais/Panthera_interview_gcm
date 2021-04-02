@@ -129,6 +129,8 @@ def covid_data_get():
     cases_df = retrieve_data(cases_url_str)
     deaths_df = retrieve_data(deaths_url_str)
     recoveries_df = retrieve_data(recoveries_url_str)
+    prov_keys_df = pd.read_csv(working_path+'/province_pop.csv', index_col='province')
+    prov_keys_dict = prov_keys_df.population.to_dict()
     # remove columns that arent needed
     cases_clean_df = cases_df.drop(['YYYYMMDD','UNKNOWN','source'],axis=1)
     death_clean_df = deaths_df.drop(['YYYYMMDD','UNKNOWN','source'],axis=1)
@@ -150,6 +152,13 @@ def covid_data_get():
     covid_df.loc[mask, 'Daily New Cases'] = 0
     covid_df['Daily Deaths'] = covid_df['Cumulative Deaths'].diff()
     covid_df['Daily Recoveries'] = covid_df['Cumulative Recoveries'].diff()
+    # add population size column
+    for i,j in prov_keys_dict.items():
+        covid_df.loc[covid_df.province == i, ['population']] = j
+    # Rescale cumulative cases to be per 1000 people
+    covid_df['Cumulative Cases per 1000'] = (covid_df['Cumulative Cases']/covid_df['population'])*1000
+    covid_df['Cumulative Deaths per 1000'] = (covid_df['Cumulative Deaths']/covid_df['population'])*1000
+    covid_df['Cumulative Recoveries per 1000'] = (covid_df['Cumulative Recoveries']/covid_df['population'])*1000
     # convert date to datetime pandas
     covid_df['date'] = pd.to_datetime(covid_df['date'],format="%d-%m-%Y")
     return covid_df
