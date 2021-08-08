@@ -12,7 +12,7 @@ On this dashboard we display multiple statistics that describe COVID-19.
 The aim of the dashboard is to aid in travel decision making when travelling within South Africa.
 
 ### How to use the dashboard
-[UPDATE] To run it locally download the COVID_RSA.rar file. unzip it and follow the instructions in the READM.txt file.
+[UPDATE] To run it locally [download the COVID_RSA.rar file.](https://github.com/ChristopherMarais/Panthera_interview_gcm/blob/main/COVID_RSA.rar) unzip it and follow the instructions in the READM.txt file.
 
 A statistic to view is selected from the buttons above each plot. Further selection of what data to view can be done by clicking and double-clicking on the legend of each plot. This may help with singling out specific lines in the line charts. To overcome the current bug with the mobility line graphs you have to drag a window over the section of the plot that contains the data. This way the data will be fitted to the plot. Just remember that double-clicking on the plot will reset it to the normal zoom level. The plots could also be manipulated and then saved as images locally for offline use. Alternatively the dashboard can also be accessed as a docker image to be run locally by pulling the image from [Docker Hub](https://hub.docker.com/r/gcmarais/panthera_interview). This is done with the following command: "docker pull gcmarais/panthera_interview"
 
