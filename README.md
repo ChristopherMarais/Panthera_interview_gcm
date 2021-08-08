@@ -2,6 +2,15 @@
 This repo contains the code and static data used to create a [COVID-19 dashboard for South Africa](http://3.140.191.119:8050).
 This was done as part of the interviewing process at Panthera.
 
+## How to run the dashboard locally
+* To run it locally Docker desktop needs to be isntalled and running.
+1. To run it locally [download the COVID_RSA.rar file.](https://github.com/ChristopherMarais/Panthera_interview_gcm/blob/main/COVID_RSA.rar)
+2. Unzip the file
+3. Run ./COVID_RSA/COVID_RSA Pull.bat to pull the image from docker hub
+4. Run ./COVID_RSA/COVID_RSA Run.bat to spin up a container and launch the dashboard in your browser
+5. Run ./COVID_RSA/COVID_RSA Kill.bat to shut down container and remove it when finished
+
+
 ### Data source
 The Dynamic data for this project is sourced from the [Data Science for Social Impact Research Group](https://github.com/dsfsi/covid19za/tree/master/data).
 A lot of insipiration was also taken from their own [dashboard](https://datastudio.google.com/u/0/reporting/1b60bdc7-bec7-44c9-ba29-be0e043d8534/page/hrUIB).
@@ -12,8 +21,6 @@ On this dashboard we display multiple statistics that describe COVID-19.
 The aim of the dashboard is to aid in travel decision making when travelling within South Africa.
 
 ### How to use the dashboard
-[UPDATE] To run it locally [download the COVID_RSA.rar file.](https://github.com/ChristopherMarais/Panthera_interview_gcm/blob/main/COVID_RSA.rar) unzip it and follow the instructions in the READM.txt file.
-
 A statistic to view is selected from the buttons above each plot. Further selection of what data to view can be done by clicking and double-clicking on the legend of each plot. This may help with singling out specific lines in the line charts. To overcome the current bug with the mobility line graphs you have to drag a window over the section of the plot that contains the data. This way the data will be fitted to the plot. Just remember that double-clicking on the plot will reset it to the normal zoom level. The plots could also be manipulated and then saved as images locally for offline use. Alternatively the dashboard can also be accessed as a docker image to be run locally by pulling the image from [Docker Hub](https://hub.docker.com/r/gcmarais/panthera_interview). This is done with the following command: "docker pull gcmarais/panthera_interview"
 
 #### Notable statistics on the dashboard map:
