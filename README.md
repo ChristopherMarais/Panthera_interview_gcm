@@ -6,9 +6,9 @@ This was done as part of the interviewing process at Panthera.
 * To run it locally Docker desktop needs to be isntalled and running.
 1. To run it locally [download the COVID_RSA.rar file.](https://github.com/ChristopherMarais/Panthera_interview_gcm/blob/main/COVID_RSA.rar)
 2. Unzip the file
-3. Run ./COVID_RSA/COVID_RSA Pull.bat to pull the image from docker hub
-4. Run ./COVID_RSA/COVID_RSA Run.bat to spin up a container and launch the dashboard in your browser
-5. Run ./COVID_RSA/COVID_RSA Kill.bat to shut down container and remove it when finished
+3. Run _COVID_RSA Pull.bat_ to pull the image from docker hub
+4. Run _COVID_RSA Run.bat_ to spin up a container and launch the dashboard in your browser
+5. Run _COVID_RSA Kill.bat_ to shut down container and remove it when finished
 
 
 ### Data source
