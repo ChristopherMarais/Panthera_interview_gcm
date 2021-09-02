@@ -7,12 +7,12 @@ This was done as part of the interviewing process at Panthera.
 
 <br />
 
-To run it locally on **Windows** 
-[download and run the COVID_RSA.bat file.](https://github.com/ChristopherMarais/Panthera_interview_gcm/blob/main/COVID_RSA.bat)
+To run it locally on **Windows**:<br /> 
+[Download and run the COVID_RSA.bat file.](https://github.com/ChristopherMarais/Panthera_interview_gcm/blob/main/COVID_RSA.bat)
 
 OR
 
-[download the COVID_RSA.rar file.](https://github.com/ChristopherMarais/Panthera_interview_gcm/blob/main/COVID_RSA.rar)
+[Download the COVID_RSA.rar file.](https://github.com/ChristopherMarais/Panthera_interview_gcm/blob/main/COVID_RSA.rar)
 1. Unzip the file
 2. Run _COVID_RSA Pull.bat_ to pull the image from docker hub
 3. Run _COVID_RSA Run.bat_ to spin up a container and launch the dashboard in your browser
@@ -20,12 +20,12 @@ OR
 
 <br />
 
-To run it locally on **MacOS** 
-[download and run the COVID_RSA.command file.](https://github.com/ChristopherMarais/Panthera_interview_gcm/blob/main/COVID_RSA.command)
+To run it locally on **MacOS**:<br /> 
+[Download and run the COVID_RSA.command file.](https://github.com/ChristopherMarais/Panthera_interview_gcm/blob/main/COVID_RSA.command)
 
 OR
 
-[download the COVID_RSA.zip file.](https://github.com/ChristopherMarais/Panthera_interview_gcm/blob/main/COVID_RSA.zip)
+[Download the COVID_RSA.zip file.](https://github.com/ChristopherMarais/Panthera_interview_gcm/blob/main/COVID_RSA.zip)
 1. Unzip the file
 2. Run _COVID_RSA Pull.command_ to pull the image from docker hub
 3. Run _COVID_RSA Run.command_ to spin up a container and launch the dashboard in your browser
