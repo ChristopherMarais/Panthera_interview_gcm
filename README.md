@@ -3,7 +3,7 @@ This repo contains the code and static data used to create a [COVID-19 dashboard
 This was done as part of the interviewing process at Panthera.
 
 ## How to run the dashboard locally
-* To run it locally Docker desktop needs to be isntalled and running. It can be downlaoded from [here](https://www.docker.com/products/docker-desktop).
+* To run it locally Docker desktop needs to be installed and running. It can be downlaoded from [here](https://www.docker.com/products/docker-desktop).
 
 <br />
 
